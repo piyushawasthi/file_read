@@ -1,0 +1,6 @@
+<%= form_tag '/get_file', :multipart => true do %>
+   <label for="file">Upload text File</label> <%= file_field_tag "file" %>
+   <%= label_tag(:input_line_size, "Enter Line Size:") %>
+   <%= number_field_tag(:input_line_size, nil, in: 1...100, placeholder: 'Input like:  10 char per line') %>
+   <%= submit_tag("Generate") %>
+<% end %>
